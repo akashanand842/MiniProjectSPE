@@ -20,14 +20,14 @@ public class Calculator {
             System.out.println("Calculator using DevOps. \n Choose:");
             System.out.print("1. Factorial\n2. Square root\n3. Power\n4. Natural Logarithm\n" +
                     "5. Exit\nEnter your choice: ");
-            int choice;
+            int x;
             try {
-                choice = scanner.nextInt();
+                x = scanner.nextInt();
             } catch (InputMismatchException error) {
                 return;
             }
 
-            switch (choice) {
+            switch (x) {
                 case 1:
                     // Factorial
                     System.out.print("Enter a number : ");
@@ -86,7 +86,17 @@ public class Calculator {
 
     public double squareRoot(double number1) {
         logger.info("[SQ ROOT] - " + number1);
-        double result = Math.sqrt(number1);
+        double result = 0;
+        try{
+            if(number1 < 0){
+                throw new Exception("Case of Imaginary Number");
+            }
+            result = Math.sqrt(number1);
+        }
+        catch (Exception error){
+            logger.error("[EXCEPTION - LOG] - Cannot find square root of negative numbers");
+            return Double.NaN;
+        }
         logger.info("[RESULT - SQ ROOT] - " + result);
         return result;
     }
@@ -112,7 +122,8 @@ public class Calculator {
                 result = Math.log(number1);
             }
         } catch (ArithmeticException error) {
-            System.out.println("[EXCEPTION - LOG] - Cannot find log of negative numbers " + error.getLocalizedMessage());
+            logger.error("[EXCEPTION - LOG] - Cannot find logarithm of negative numbers");
+            return Double.NaN;
         }
         logger.info("[RESULT - NATURAL LOG] - " + result);
         return result;

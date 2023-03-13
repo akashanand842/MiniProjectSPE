@@ -1,0 +1,18 @@
+2023-03-14 02:03:33.206 [main] INFO  org.example.Calculator - [RESULT - POWER] - 25.0
+2023-03-14 02:03:33.208 [main] INFO  org.example.Calculator - [NATURAL LOG] - 2.4
+2023-03-14 02:03:33.209 [main] INFO  org.example.Calculator - [RESULT - NATURAL LOG] - 0.8754687373538999
+2023-03-14 02:03:33.210 [main] INFO  org.example.Calculator - [NATURAL LOG] - 2.1
+2023-03-14 02:03:33.210 [main] INFO  org.example.Calculator - [RESULT - NATURAL LOG] - 0.7419373447293773
+2023-03-14 02:05:58.176 [main] INFO  org.example.Calculator - [SQ ROOT] - -4.0
+2023-03-14 02:05:58.181 [main] INFO  org.example.Calculator - [RESULT - SQ ROOT] - NaN
+2023-03-14 02:12:09.065 [main] INFO  org.example.Calculator - [NATURAL LOG] - -1.0
+2023-03-14 02:12:09.072 [main] INFO  org.example.Calculator - [RESULT - NATURAL LOG] - NaN
+2023-03-14 02:15:47.747 [main] INFO  org.example.Calculator - [SQ ROOT] - -3.0
+2023-03-14 02:15:47.751 [main] ERROR org.example.Calculator - [EXCEPTION - LOG] - Cannot find square root of negative numbers
+java.lang.Exception: Case of Imaginary Number
+	at org.example.Calculator.squareRoot(Calculator.java:92) [classes/:?]
+	at org.example.Calculator.main(Calculator.java:43) [classes/:?]
+2023-03-14 02:15:47.764 [main] INFO  org.example.Calculator - [RESULT - SQ ROOT] - 0.0
+2023-03-14 02:17:44.459 [main] INFO  org.example.Calculator - [SQ ROOT] - -4.0
+2023-03-14 02:17:44.465 [main] ERROR org.example.Calculator - [EXCEPTION - LOG] - Cannot find square root of negative numbers
+2023-03-14 02:17:44.466 [main] INFO  org.example.Calculator - [RESULT - SQ ROOT] - 0.0
