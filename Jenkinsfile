@@ -4,19 +4,19 @@ pipeline {
     }
     agent any
     stages {
-        stage('Git pull') {
+        stage('Git Pull') {
             steps {
                 git 'https://github.com/akashanand842/MiniProjectSPE.git'
             }
         }
-        stage('Maven Build') {
+        stage('Build') {
             steps {
                 script{
                     sh 'mvn clean install'
                 }
             }
         }
-        stage('Docker Build to Image') {
+        stage('Building an Docker Image') {
             steps {
                 script{
                     imageName=docker.build "akashanand842/spe_mini_project"
@@ -24,7 +24,7 @@ pipeline {
             }
         }
 
-        stage('Push Docker Image') {
+        stage('Push The Docker Image') {
             steps {
                 script{
                     docker.withRegistry('','docker-key'){
