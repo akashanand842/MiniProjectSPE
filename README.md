@@ -1,2 +1,2 @@
 # MiniProjectSPE
-calculator 
+Calculator 
